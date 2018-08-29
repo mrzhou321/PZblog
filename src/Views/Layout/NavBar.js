@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Icon, Menu, Row, Col } from 'antd'
 import './NavBar.css'
+import { Link } from 'react-router-dom'
+import Login from './Login'
 
 const SubMenu = Menu.SubMenu;
 
@@ -16,31 +18,37 @@ class BlogHeader extends React.Component {
 	}
 	render () {
 		return (
-		<Row>
-      <Col span={6}>周昂的博客</Col>
-      <Col span={12}>
-			   	<Menu
-					 className="header-menu"
-					onClick={this.handleClick}
-					selectedKeys={[this.state.current]}
-					mode="horizontal"
-				>
-					<Menu.Item key="home">
-						<Icon type="home" />首页
-					</Menu.Item>
-					<Menu.Item key="archive">
-						<Icon type="folder" />归档
+			<Row>
+				<Col span={4} className="header-col-4"><span className='header-title'>周昂的博客</span></Col>
+				<Col span={16} className="header-col-18">
+					<Menu
+						className="header-menu"
+						onClick={this.handleClick}
+						selectedKeys={[this.state.current]}
+						mode="horizontal"
+					>
+						<Menu.Item key="home">
+							<Link to="/">
+								<Icon type="home" />首页
+							</Link>
 						</Menu.Item>
-					<Menu.Item key="collection">
-						<Icon type="star-o" />收藏
+						<Menu.Item key="archive">
+							<Icon type="folder" />归档
 						</Menu.Item>
-					<Menu.Item key="about">
-						<Icon type="user" />关于
+						<Menu.Item key="collection">
+							<Icon type="star-o" />收藏
 						</Menu.Item>
-				</Menu>
-			</Col>
-			<Col span={6}>col-12</Col>
-    </Row>
+						<Menu.Item key="about">
+							<Link to="/about">
+							<Icon type="user" />关于
+							</Link>
+						</Menu.Item>
+					</Menu>
+				</Col>
+				<Col span={4} className="header-col-4" >
+				    <Login/>
+				 </Col>
+			</Row>
 		)
 	}
 }
