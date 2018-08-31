@@ -8,12 +8,19 @@ import routeConfig from './Routes/index'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { renderRoutes } from 'react-router-config'
 import { LocaleProvider } from 'antd'
+import reducers from './Store/index'
+import { createStore, applyMiddleware } from 'redux'
+import {Provider} from 'react-redux'
+import logger from 'redux-logger'
 
-ReactDOM.render((
+const store = createStore(reducers,applyMiddleware(logger))
+ReactDOM.render((  
+<Provider store={store}>
   <LocaleProvider locale={zhCN}>
     <Router keyLength={12}>
       <div>{renderRoutes(routeConfig)} </div>
     </Router>
   </LocaleProvider>
+</Provider>
  ), document.getElementById('root'))
 registerServiceWorker()
