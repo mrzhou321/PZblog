@@ -1,4 +1,4 @@
-import App from '../App'
+import App from '../Views/Layout/App'
 import Home from '../Views/Home/'
 import About from '../Views/About/'
 import Blog from '../Views/Blog/'

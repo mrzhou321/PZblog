@@ -23,11 +23,12 @@ class Home extends React.Component {
   render() {
 	return (
 		<Row>
-			<Col span={20}>
+			<Col span={18}>
 				<List
 					className='home-list'
 					itemLayout="vertical"
 					size="large"
+					bordered
 					pagination={{
 						onChange: (page) => {
 							console.log(page);
@@ -52,10 +53,10 @@ class Home extends React.Component {
 					)}
 				/>
 			</Col>
+			<Col span={2}></Col>
 			<Col span={4}>
 				<Card
 					hoverable
-					style={{ width: 240 }}
 					cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
 				>
 					<Meta

@@ -1,4 +1,4 @@
-import {combineReducers } from 'redux' 
+import { combineReducers } from 'redux'
 import AppReducer from './AppReducer'
 import ArticleReducer from './ArticleReducer'
 

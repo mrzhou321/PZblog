@@ -9,7 +9,7 @@ const appReducer = (state=defaultState, action) =>{
       state.menuActivedKey = action.payload
       return  state
     }
-    defaulte: return state 
+    default: return state
   }
 }
 
