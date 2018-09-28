@@ -1,18 +1,16 @@
 import React from 'react'
+import ReactMarkDown from 'react-markdown'
+import './Detail.css'
 
+const input = '# This is a header\n\nAnd this is a paragraph'
 class Blog extends React.Component {
-
   render() {
-	return (
-		<div>
-		  <h1>Shopping List</h1>
-		  <ul>
-			<li>Instagram</li>
-			<li>WhatsApp</li>
-			<li>Oculus</li>
-		  </ul>
-		</div>
-	)
+    return (
+      <div className="article-detail-container">
+        <p>测试文章详情</p>
+        <ReactMarkDown source={input} />
+      </div>
+    )
   }
 }
 
