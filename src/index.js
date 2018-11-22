@@ -15,11 +15,11 @@ import {Provider} from 'react-redux'
 import logger from 'redux-logger'
 
 const store = createStore(reducers,applyMiddleware(logger))
-ReactDOM.render((  
+ReactDOM.render((
 <Provider store={store}>
   <LocaleProvider locale={zhCN}>
     <Router keyLength={12}>
-      <div>{renderRoutes(routeConfig)} </div>
+      {renderRoutes(routeConfig)}
     </Router>
   </LocaleProvider>
 </Provider>

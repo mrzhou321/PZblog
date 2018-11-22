@@ -9,14 +9,14 @@ import Welcome from  '../Views/Welcome/index'
 const routeConfig = [
 	{
 		component:Welcome,
-		path: 'welcome'
+		path: '/',
+        exact: true
 	},
   {
 	component: App,
 	routes: [
 	  {
-		path: '/',
-		exact: true,
+		path: '/home',
 		component: Home
 		},
 		{

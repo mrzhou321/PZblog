@@ -8,7 +8,9 @@ class Welcome extends React.Component {
 	render() {
 		return (
 			<div className="welcome-container">
-
+				<div className="welcome-content">
+                   <span>千里之行，始于足下</span>
+				</div>
 			</div>
 		)
 	}
