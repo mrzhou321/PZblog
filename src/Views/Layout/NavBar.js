@@ -30,7 +30,7 @@ class BlogHeader extends React.Component {
             mode="horizontal"
           >
             <Menu.Item key="home">
-              <Link to="/">
+              <Link to="/home">
                 <Icon type="home" />
                 首页
               </Link>

@@ -11,5 +11,10 @@
     align-items: center;
 }
 .welcome-content{
-  color: white;
+    color: white;
+    font-size: 18px;
+}
+
+.home-btn{
+    background-color: inherit;
 }
